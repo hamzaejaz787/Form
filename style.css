@@ -1,0 +1,119 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.register__wrapper{
+    position: relative;
+    background-image: linear-gradient(135deg, #0eeff0 30%, #088f90 90%);
+    z-index: 3;
+    padding: 100px;
+    height: 100vh;
+    font-size: 1rem;
+    color: #999999;
+}
+
+
+.register__wrapper form input{
+    display: inline-block;
+    width: 100%;
+    padding: 0.75em 1.5em;
+    line-height: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-bottom-width: 3px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.register__wrapper form input:not(:last-child){
+    margin-bottom: 1.5em;
+}
+
+.register__wrapper form input[type="email"]:focus,
+.register__wrapper form input[type="email"]:active,
+.register__wrapper form input[type="password"]:focus,
+.register__wrapper form input[type="password"]:active{
+    border-color: #ccc;
+}
+
+.register__wrapper form input[type="submit"]{
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    background-color: #f2395a;
+    background-size: 20px 20px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%,
+                                             rgba(0, 0, 0, 0) 25%,
+                                             rgba(0, 0, 0, 0) 50%,
+                                             rgba(255, 255, 255, 0.15) 50%,
+                                             rgba(255, 255, 255, 0.15) 75%,
+                                             rgba(0, 0, 0, 0) 75%,
+                                             rgba(0, 0, 0, 0));
+    border: 1px solid #f02146;
+    border-bottom-width: 3px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.register__wrapper form input[type="submit"]:hover{
+    background-size: 40px 40px;
+}
+
+h3{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+    border-bottom: 1px dashed #e6e6e6;
+}
+
+.register-block{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.register-block::before, .register-block::after{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    transform: scale(0.9) translate(0, 0);
+    transition: all 300ms ease;
+}
+
+.register-block:hover::before{
+    z-index: -1;
+    transform: scale(0.96) translate(0, 16px);
+}
+.register-block:hover::after{
+    z-index: -2;
+    transform: scale(0.92) translate(0, 32px);
+}
